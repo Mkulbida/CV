@@ -79,13 +79,13 @@ Contact {#contact}
 
 
 - <i class="fa fa-envelope"></i> mkulbida@yahoo.com
-- <i class="fa fa-phone"></i> 1 (877) 7-MICKEY
+- <i class="fa fa-phone"></i> (773) 620-9400
 
 
 More info {#more-info}
 --------------------------------------------------------------------------------
 
-Data visualization examples available at https://github.com/Mkulbida
+Data visualization examples available upon request.
 
 
 Disclaimer {#disclaimer}
