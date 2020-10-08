@@ -45,6 +45,18 @@ position_data <- read_csv('positions.csv') %>%
 
 ```
 
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
 
 Aside
 ================================================================================
@@ -52,6 +64,14 @@ Aside
 
 ![logo](social work.jpg){width=100%}
 
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("View this CV online with links at https://mkulbida.github.io/CV/")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/mkulbida/cv/blob/main/resume.pdf)")
+}
+```
 
 Contact {#contact}
 --------------------------------------------------------------------------------
@@ -143,7 +163,23 @@ References {data-icon=address-card}
 position_data %>% print_section('references')
 ```
 
+```{r}
+if(PDF_EXPORT){
+  cat("
+  
+Links {data-icon=link}
+--------------------------------------------------------------------------------
 
+<br>
+
+
+")
+  
+  walk2(links, 1:length(links), function(link, index){
+    print(glue('{index}. {link}'))
+  })
+}
+```
 
 
 
